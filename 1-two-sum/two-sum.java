@@ -6,13 +6,11 @@ class Solution {
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]+nums[j]==target){
                     
-                    ans[0]=i;
-                    ans[1]=j;
-                    break;
+                    return new int[]{i,j};
                 }
             }
 
         }
-        return ans;
+        return new int[]{-1, -1};
     }
 }
