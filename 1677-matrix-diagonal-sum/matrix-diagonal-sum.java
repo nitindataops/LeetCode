@@ -3,11 +3,13 @@ class Solution {
         int n=mat.length;
         int totalSum=0;
         for(int i=0;i<n;i++){
-            for(int j=0;j<mat[0].length;j++)
-            if(i==j || i+j==n-1){
-            totalSum+=mat[i][j];
-            }
+            totalSum+=mat[i][i]; //sum of primary diagonal
+            totalSum+=mat[i][n-1-i]; //sum of secondary diagonal
+
         }
+        if(n%2==1){
+            totalSum-=mat[n/2][n/2];
+        }     
         return totalSum;   
     }
 }
