@@ -5,8 +5,8 @@ class Solution {
             int start = 0;
             int end = n - 1;
             while (start <= end) {
-                int temp = image[row][start]^1;
-                image[row][start] = image[row][end]^1;
+                int temp = 1- image[row][start];
+                image[row][start] = 1- image[row][end];
                 image[row][end] = temp;
                 start++;
                 end--;
