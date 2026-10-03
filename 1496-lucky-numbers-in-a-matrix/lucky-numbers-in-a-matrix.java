@@ -15,7 +15,7 @@ class Solution {
         }
         for (int row = 0; row < m; row++) {
             for (int col = 0; col < n; col++) {
-                if (matrix[row][col] == rowMin[row] && matrix[row][col] == colMax[col]) {
+                if (rowMin[row]== colMax[col]) {
                     result.add(matrix[row][col]);
                 }
             }
